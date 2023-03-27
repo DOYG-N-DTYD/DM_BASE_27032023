@@ -1,0 +1,70 @@
+.mid_part
+    img
+        margin: 10px
+        display: block
+        margin-left: auto
+        margin-right: auto
+    @media screen and ( max-width:965px )
+        display: grid
+        grid-template-columns: 1fr
+    @media screen and ( min-width:966px )
+        display: grid
+        grid-template-columns: 1fr 1fr
+
+.mid_part_num //при наведении прозрачность картинки 
+    position: relative
+    &:hover
+        .mid_part_num_1_p,
+        .mid_part_num_2_p,
+        .mid_part_num_3_p,
+        .mid_part_num_4_p,
+        .mid_part_num_5_p,
+        .mid_part_num_6_p,
+        .mid_part_num_7_p,
+        .mid_part_num_8_p
+            opacity: 0.3
+            transition: 0.5s  
+    &:hover
+        .mid_part_num_1_t,
+        .mid_part_num_2_t,
+        .mid_part_num_3_t,
+        .mid_part_num_4_t,
+        .mid_part_num_5_t,
+        .mid_part_num_6_t,
+        .mid_part_num_7_t,
+        .mid_part_num_8_t  
+            transition: 0.7s
+            opacity: 1      
+       
+
+
+.mid_part_num_1_t,
+.mid_part_num_2_t,
+.mid_part_num_3_t,
+.mid_part_num_4_t,
+.mid_part_num_5_t,
+.mid_part_num_6_t,
+.mid_part_num_7_t,
+.mid_part_num_8_t
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+    font-size: 18px
+
+    text-align: center
+    font-size: 42px
+    color: #6e6e6e
+    line-height: 1em
+    font-weight: 600
+    //color: transparent        ?????????
+    cursor: default
+    -webkit-text-stroke: 1px #353535
+    transition: all 0.2s ease-in-out 
+    opacity: 0
+    &:hover
+        transition: 0.7s
+        opacity: 1
+    
+        
+

@@ -1,0 +1,61 @@
+//--------//--------//--------//--------feedBack
+@mixin width_height($w,$h)         //Wrapper Width Height
+    width: $w
+    height: $h  
+@mixin arrows_top_bottom($t,$b)     //prefer 125px
+    margin-top: $t
+    margin-bottom: $b
+//--------//--------//--------//--------feedBack
+    
+.FormFB,.ContainerBackMailData
+    
+    //@media screen and ( max-width: 1020px )
+       // margin-top: 700px
+    label
+        display: block
+        margin-top: 20px
+        letter-spacing: 2px
+    form 
+        
+        margin: 0 auto
+          ////////////// ???????????????????????????????
+        @media screen and ( min-width: 460px )
+            width: 459px  
+        @media screen and ( max-width: 459px )
+            width: 250px 
+    input,textarea
+        //@include width_height(439px,27px)           ////////////// ???????????????????????????????
+        @media screen and ( min-width: 460px )
+            width: 459px  
+        @media screen and ( max-width: 459px )
+            width: 250px 
+        height: 27px
+        background:#e7e7e7
+        border: 1px solid #dedede
+        padding: 10px
+        margin-top: 3px
+        font-size: 0.9em
+        color:#3a3a3a
+        border-radius: 2px       
+    textarea 
+        height: 213px
+    input,textarea
+        &:focus
+            border: 1px solid #97d6eb
+    #submit 
+        width: 127px
+        height: 38px       
+        background-image: linear-gradient(180deg, #bdbdbd,#302f31);  
+        font-family: monospace
+        font-size: 1.3em
+        color: #fff
+        border: none
+        margin-top: 20px
+        cursor: pointer
+    #submit
+        &:hover 
+            opacity: 0.9
+    
+
+
+

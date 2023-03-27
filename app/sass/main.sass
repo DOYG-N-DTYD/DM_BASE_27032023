@@ -1,0 +1,317 @@
+@import "config.sass"
+@import "menu.sass"
+@import "gallery.sass"
+@import "feedBack.sass"
+@import "page12345.sass"
+@import "page1.sass"
+@import "page2.sass"
+@import "page3.sass"
+@import "page4.sass"
+@import "page5.sass"
+@import "page_about.sass"
+@import "page_contact.sass"
+@import "page_orderBuy.sass"
+@import "page_products.sass"
+/** *
+    margin: 0
+    padding: 0 **/
+body
+    min-width: 340px
+ul
+    list-style-type: none
+    padding: 10px
+li
+    text-align: left
+a
+    text-decoration: none
+    color: #666
+p
+    text-decoration: none
+    //color: #000000
+form
+    margin-left: auto
+    margin-right: auto
+
+//switch buttons languages
+.Switchers
+    z-index: 10
+    position: fixed
+    right: 0
+    top: 175px
+    cursor: pointer
+    img
+        width: 100%
+.bs1,.bs3
+    height: 46px
+    width: 46px
+    
+    
+    
+//MIXINS
+@mixin bgcolor($clr)
+    background-color: $clr
+@mixin w-h-size($wdth,$hght)
+    width: $wdth
+    height: $hght    
+//TEMPLS    
+%b-b-c
+    border: groove
+    border-color: black
+    border-width: 2px
+
+
+.top_mid_fb
+    @media screen and ( max-width: 460px ) 
+        display: none
+    @media screen and ( min-width: 461px ) 
+        display: grid
+    @media screen and ( min-width: 1001px )             //Если > 1333 все части равны
+        grid-auto-rows: 1fr 1fr 1fr
+    @media screen and ( max-width: 1000px )             //Если < 1332 все части равны первые две больше
+        grid-auto-rows: 1fr 1fr 1fr
+//--------------------------------top of the page
+.top
+    //@include bgcolor($TopColor)
+    margin-top: 40px
+    @include w-h-size(auto,0px)  
+    
+    @media screen and ( min-width: 1001px )  
+        display: grid
+        grid-template-columns: 1fr 2fr 1fr
+.title
+    margin-bottom: 75px
+    padding: 15px
+    @media screen and ( min-width: 757px ) and (max-width: 999px)
+        text-align: center
+        font-size: 52px
+    @media screen and ( max-width:  756px)
+        display: none
+    text-align: center
+    line-height: 1.4  
+    position: relative
+    //display: inline-block off for EN version
+    font-size: 62px
+    color: #d5b45b
+    line-height: 1em
+    font-weight: 600
+    //color: transparent        ?????????
+    cursor: default
+    -webkit-text-stroke: 1px #353535
+    transition: all 0.2s ease-in-out
+    transition: 1s 
+.information
+    
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    justify-content: center
+    @media screen and ( max-width: 1000px )                         // Если < 1000 То позиция вертикальная у информационных боксов
+        grid-template-columns: 1fr  
+                        
+    @media screen and ( min-width: 1330px )                         // Если > 1330 gap = 150px
+        grid-gap: 150px
+    @media screen and ( max-width: 1329px )                         // Если < 1329 gap = 10px
+        grid-gap: 10px
+    margin-top: 100px
+    //width: 50%
+    margin: 0 auto
+    transition: 2s
+    li
+        list-style-type: disc
+        margin-bottom: 10px
+        margin-left: 10px
+.inf-box-1,.inf-box-2,.inf-box-3
+    //display: grid                                         //temp
+    @media screen and ( min-width: 460px )                  
+        grid-template-rows: 1fr 5fr
+    justify-self: center
+    @media screen and ( min-width: 459px )  
+        width: 300px
+    //height: 250px
+    
+.inf-box-1-up,.inf-box-2-up,.inf-box-3-up
+    display: grid                                         //temp
+    grid-template-columns: 2fr 5fr
+    background-image: linear-gradient(180deg, rgb(48, 47, 49), #302f31);  
+    height: 80px
+    border-radius: 5px
+.inf-box-1-up-left,.inf-box-2-up-left,.inf-box-3-up-left
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+    img
+        opacity: 0.8
+        height: 55%
+        width: 50%
+        &:hover
+            transition: 0.4s
+            opacity: 1
+    
+    text-align: center
+    font-size: 50px
+    line-height: 1.4  
+    position: relative
+    display: inline-block
+    font-size: 72px
+    color: rgb(213, 180, 91)
+    line-height: 1em
+    font-weight: 600
+    //color: transparent        ?????????
+    cursor: default
+    -webkit-text-stroke: 1px rgb(53, 53, 53)
+    transition: all 0.2s ease-in-out 
+    
+.inf-box-1-up-right,.inf-box-2-up-right,.inf-box-3-up-right
+    padding: 8px
+    text-align: center
+    font-size: 50px
+    line-height: 1.4  
+    position: relative
+    display: inline-block
+
+    display: flex
+    justify-content: center
+    align-items: center
+
+    font-size: 25px
+    color: rgb(213, 180, 91)
+    line-height: 1em
+    font-weight: 600
+    //color: transparent        ?????????
+    cursor: default
+    -webkit-text-stroke: 1px #353535
+    transition: all 0.2s ease-in-out 
+
+.inf-box-1-down,.inf-box-2-down,.inf-box-3-down            
+    //background-color: #a3a53e  
+    text-align: justify            
+    //text-align: center
+    margin-top: 20px
+    font-size: 1.5em
+.inf-box-2-down-L
+    display: grid
+    grid-template-columns: 1fr 1fr
+//--------------------------------mid of the page
+.mid_460px
+    @media screen and ( min-width: 461px )
+        display: none
+.mid
+    @media screen and ( max-width: 460px )
+        display: none    
+    display: grid
+    @media screen and ( min-width: 1001px )
+        grid-template-columns: 1fr 1fr 1fr
+    margin-top: 150px
+    @media screen and ( max-width: 1000px )
+        margin-top: 550px
+    
+                                                    // ?????????????????? grid-template-columns: 1fr 
+    
+    //height: 400px
+    //margin-top: 300px
+    //@include bgcolor($MidColor)
+    //@include w-h-size(auto,450px)     
+
+.left_side,.right_side
+    @media screen and ( max-width: 1000px  )                            // если меньше тысячи то выключаю бока
+        display: none
+    //background-color: #ac2222
+    
+//--------------------------------FeedBack
+.FeedBack_460px
+    @media screen and ( min-width: 461px )
+            display: none
+.FeedBack
+    @media screen and ( max-width: 460px )
+        display: none
+    display: grid
+    @media screen and ( min-width: 1001px )
+        grid-template-columns: 1fr 10fr 1fr 
+                                                    // ???????????????????????????   grid-template-columns: 1fr 
+    height: 600px
+    //background-color: #2db634
+.FormFB,.ContainerBackMailData
+    
+    form
+        margin-left: auto
+        margin-right: auto
+        #fname,#lname
+            width: 200px
+            height: 25px
+
+
+//--------------------------------bottom of the page
+.bottom  
+    //@media screen and ( max-width: 1020px )
+        //margin-top: 700px
+    @include bgcolor($BottomColor)
+    //@include w-h-size(auto,450px)  
+    display: grid
+    justify-content: center
+    @media screen and ( min-width: 1000px )       
+        grid-template-columns: 2fr 10fr 1fr
+    @media screen and ( max-width: 460px )                  // > 1332 1 бокса в боттоме
+        //margin-top: 1100px
+   
+    ul
+        li
+            &:hover                 // ПЕРЕДЕЛАТЬ ПОД ССЫЛКИ !!!!!!!!!!!
+                color: #D5B45B
+                cursor: pointer
+            a
+                text-decoration: none
+                color: #fff
+                &:hover 
+                    color: #D5B45B
+    
+    
+.information-g
+    display: grid
+    @media screen and ( min-width: 1332px )                 // > 1332 3 бокса в боттоме
+        grid-template-columns: 1fr 1fr 1fr
+    @media screen and ( max-width: 1331px )                 // > 1332 2 бокса в боттоме
+        grid-template-columns: 1fr 1fr
+    @media screen and ( max-width: 982px )                  // > 1332 1 бокса в боттоме
+        grid-template-columns: 1fr
+    
+    padding: 60px
+    text-decoration: none
+    line-height: 1.4
+    li
+        color: #fff
+        font-size: 18px
+.information-g
+    > div
+        //@include bgcolor($DivForChange)
+        //@include w-h-size(300px,100px) 
+        //@extend %b-b-c 
+//1
+.inf-box1  
+    @media screen and ( max-width: 1332px )
+        display: none
+//2
+.inf-box2 
+//2-1
+.inf-box2-1 
+//2-2
+.inf-box2-2   
+//2-2-2
+.inf-box2-2-1  
+//3
+.inf-box3    
+//4     
+//all parts
+
+
+    
+.copyright
+    background-color: #28262a
+    text-align: center
+    font-size: 10px
+//Gallery style   
+.container
+    img
+        opacity: 0.8
+        &:hover
+            opacity: 1
+            //transition: 0.1s  

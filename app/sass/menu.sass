@@ -1,0 +1,122 @@
+* 
+    padding: 0 
+    margin: 0
+
+header 
+  background: white
+  text-align: center
+
+header 
+    a 
+        text-decoration: none
+        outline: none
+        display: block
+        transition: .3s ease-in-out
+        
+.logo 
+    background-color: #28262a
+    color: #d5b45b
+    font-family: 'Playfair Display', serif
+    font-size: 2.5em
+    padding-top: 30px   
+.NameLastN
+    background-color: #28262a
+    color: #d5b45b
+    padding-bottom: 30px
+    font-size: 1.3em
+.logo,.NameLastN
+    &:hover
+        color: #dfb74b
+nav 
+  display: table
+  margin: 0 auto
+  
+
+nav 
+    ul 
+        list-style: none
+        margin: 0
+        padding: 0
+.mobile_menu
+    
+    @media screen and ( min-width: 750px )
+        display: none
+    li
+        text-align: center
+        
+        
+    
+.topmenu
+    //min-width: 754px                        // En version off
+    @media screen and ( max-width: 749px )
+        display: none
+    //background-color: #fac656
+    width: auto
+.topmenu
+    &:after
+        content: ""
+        display: table
+        clear: both
+
+.topmenu 
+    > li
+        //width: 25%
+        float: left
+        position: relative
+        font-family: 'Open Sans', sans-serif
+
+.topmenu,.mobile_menu
+    > li
+        > a 
+            text-transform: uppercase
+            font-size: 14px
+            font-weight: bold
+            color: #404040
+            padding: 15px 30px
+
+.topmenu,.mobile_menu
+    cursor: pointer
+    li 
+        a
+            &:hover 
+                color: #D5B45B
+.submenu-link 
+    &:after
+        //content: "\f107"
+        font-family: "FontAwesome"
+        color: inherit
+        margin-left: 10px
+
+.submenu 
+    background: #28262a
+    position: absolute
+    left: 0
+    top: 100%
+    z-index: 5
+    width: 180px
+    opacity: 0
+    transform: scaleY(0)
+    transform-origin: 0 0
+    transition: .5s ease-in-out
+
+.submenu 
+    a
+        color: white
+        text-align: left
+        padding: 12px 15px
+        font-size: 13px
+        border-bottom: 1px solid rgba(255,255,255,.1)
+
+.submenu 
+    li
+        &:last-child 
+            a 
+                border-bottom: none
+.topmenu,.mobile_menu
+    > li
+        &:hover 
+            .submenu 
+                opacity: 1
+                transform: scaleY(1)
+
+

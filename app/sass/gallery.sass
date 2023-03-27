@@ -1,0 +1,55 @@
+
+//--------//--------//--------//--------Gallery
+@mixin width_height($w,$h)         //Wrapper Width Height
+    width: $w
+    height: $h  
+@mixin arrows_top_bottom($t,$b)     //prefer 125px
+    margin-top: $t
+    margin-bottom: $b
+//--------//--------//--------//--------Gallery
+.wrapper
+    //width:  400px                              //width height 150/300 jpg and margin 10px AND arrows CONTAINER +100
+    height: 300px
+    
+    transition: 1s
+
+    
+          
+    display: flex
+    margin: 0 auto
+.container
+    //width:    300px                            //width height 150/300 jpg and margin 10px
+    height:  300px
+    @media screen and ( min-width: 400px ) //ширина
+        @include width_height(300px,300px) 
+    @media screen and ( min-width: 710px )//ширина
+        @include width_height(600px,300px) 
+    @media screen and ( min-width: 1020px )//ширина
+        @include width_height(900px,300px)  
+    @media screen and ( min-width: 1330px )//ширина
+        @include width_height(1200px,300px)  
+    @media screen and ( min-width: 1640px )//ширина
+        @include width_height(1500px,300px)       
+    
+    
+    position: relative
+    overflow: hidden               
+.container 
+    img
+        //@media screen and (min-width: 711px) 
+        @include width_height(300px ,300px)   
+        //@media screen and (max-width: 710px) 
+            //@include width_height(150px ,150px)
+        //top: 0px  
+        top: 0px  
+        position: absolute     
+        cursor: pointer
+        overflow: hidden
+#carouselLeft,#carouselRight
+   @include arrows_top_bottom(125px,125px)                    //Margin Top Bot arrows
+   cursor: pointer
+//@media screen and ( max-width: 1020px )
+.container,.wrapper,
+  // margin-top: 400px                    //If <1020 margin
+#carouselLeft,#carouselRight
+   //margin-top: 525px                    //need to add arrows +125
