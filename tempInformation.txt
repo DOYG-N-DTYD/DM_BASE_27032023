@@ -1,0 +1,10 @@
+git init 
+git status 
+git add .
+git commit -m "text description"
+git remote add origin https://MiroslawZborowski@bitbucket.org/MiroslawZborowski/DM_BASE_27032023.git
+git push -u origin master
+git remote -v
+git remote add github https://github.com/DOYG-N-DTYD/DM_BASE_27032023.git
+git remote add bitbucket https://MiroslawZborowski@bitbucket.org/MiroslawZborowski/DM_BASE_27032023.git
+git push github && git push bitbucket
