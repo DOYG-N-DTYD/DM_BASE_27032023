@@ -31,7 +31,7 @@ const del           = require('del');                       // nodejs del для
     function browsersync(){ // создание функции browsersync
         browserSync.init({  // инициализация browsersync
             //server: { baseDir: 'app/'}, // папка в главное директории // Если есть PHP то
-            proxy:"http://localhost:3000/AntonPawlowPoprawki/app/",
+            proxy:"http://localhost:81/21_02_2023_start_drewmet_to_maven_spring/app/",
             notify: false,              // отключение уведомлений
             online: true,               // режим офлайн: false
         })
